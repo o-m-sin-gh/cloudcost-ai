@@ -309,12 +309,7 @@ This deletes the demo functions. Then, if you want, delete the IAM access keys, 
 - [`docs/cost_management.md`](docs/cost_management.md): staying within the Free plan
 - [`docs/viva_questions.md`](docs/viva_questions.md): viva preparation
 
-## Authors
 
-| Name | Register number |
-|---|---|
-| Om Singh | RA2311003011400 |
-| Agochar Mahajan | RA2311003011429 |
 
 SRM Institute of Science and Technology · Cloud Computing · Tool Explorer
 
