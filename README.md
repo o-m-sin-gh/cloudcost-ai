@@ -59,15 +59,13 @@ CloudCost AI measures real usage, recommends a memory size, applies it safely an
 
 ## Screenshots
 
-Add your own screenshots to `docs/screenshots/` and link them here (mask your AWS account ID first).
-
 | Overview | Optimization center |
 |---|---|
-| `docs/screenshots/overview.png` | `docs/screenshots/optimization.png` |
+| ![Overview](docs/screenshots/overview.png) | ![Optimization center](docs/screenshots/optimization.png) |
 
 | Verification | History |
 |---|---|
-| `docs/screenshots/verification.png` | `docs/screenshots/history.png` |
+| ![Verification](docs/screenshots/verification.png) | ![History](docs/screenshots/history.png) |
 
 ## Architecture
 
