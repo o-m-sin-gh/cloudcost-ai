@@ -1,0 +1,53 @@
+# ---------- Secrets and credentials (NEVER commit) ----------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*credentials*
+*accessKeys*
+.aws/
+
+# ---------- Python ----------
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ---------- Node / frontend ----------
+node_modules/
+frontend/dist/
+frontend/.vite/
+*.tsbuildinfo
+npm-debug.log*
+
+# ---------- Local app data (may contain AWS account IDs and function names) ----------
+data/*/*.json
+data/*/*.csv
+data/settings.json
+reports/*.csv
+reports/*.json
+reports/*.pdf
+# keep the empty folders in Git
+!**/.gitkeep
+
+# ---------- Logs ----------
+*.log
+logs/
+
+# ---------- Editors and OS ----------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------- Build / packaging leftovers ----------
+*.zip
+*.tar.gz

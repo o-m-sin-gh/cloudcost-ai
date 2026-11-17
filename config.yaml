@@ -1,0 +1,21 @@
+# CloudCost AI configuration. Environment variables override these values.
+# mode: "demo" runs on built-in sample data (no AWS account needed).
+#       "aws"  talks to your real AWS account using your local AWS CLI profile.
+mode: demo
+region: ap-southeast-2         # Mumbai: closest to Chennai
+profile: ""                 # AWS CLI profile name; empty = default credential chain
+lookback_days: 14           # analysis window (Compute Optimizer also uses 14 days)
+metrics_cache_minutes: 10   # reuse CloudWatch snapshots to avoid repeat API calls
+
+# Safety controls
+allow_writes: false         # must be true before ANY real AWS change can be applied
+managed_prefix: cloudcost-demo-   # only functions with this name prefix can be changed
+max_reduction_pct: 90       # refuse a single step that cuts memory by more than this
+min_monthly_savings_usd: 0.0
+
+# Lambda list prices (us-east-1 style, before free allowance). Edit for your region.
+pricing:
+  gb_second:
+    x86_64: 0.0000166667
+    arm64: 0.0000133334
+  per_request: 0.0000002

@@ -1,0 +1,33 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ReadLambdaAndMetrics",
+      "Effect": "Allow",
+      "Action": [
+        "lambda:ListFunctions",
+        "lambda:GetFunctionConfiguration",
+        "lambda:GetFunction",
+        "cloudwatch:GetMetricStatistics",
+        "compute-optimizer:GetEnrollmentStatus",
+        "compute-optimizer:GetLambdaFunctionRecommendations"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "ReadDemoLogsOnly",
+      "Effect": "Allow",
+      "Action": "logs:FilterLogEvents",
+      "Resource": "arn:aws:logs:*:*:log-group:/aws/lambda/cloudcost-demo-*:*"
+    },
+    {
+      "Sid": "ChangeDemoFunctionsOnly",
+      "Effect": "Allow",
+      "Action": [
+        "lambda:UpdateFunctionConfiguration",
+        "lambda:InvokeFunction"
+      ],
+      "Resource": "arn:aws:lambda:*:*:function:cloudcost-demo-*"
+    }
+  ]
+}
